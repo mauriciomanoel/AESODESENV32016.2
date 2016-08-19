@@ -6,30 +6,26 @@ public class Cliente {
 	private Integer codigo;
 	private String nome;
 	private String cpf;
-	private String banco;
 	private Endereco endereco;
 	
-	public Cliente(Integer codigo, String nome, String cpf, String banco, Endereco endereco) {
+	public Cliente(Integer codigo, String nome, String cpf, Endereco endereco) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.setCpf(cpf);
-		this.banco = banco;
 		this.endereco = endereco;
 	}
 	
-	public Cliente(String nome, String cpf, String banco, Endereco endereco) {
+	public Cliente(String nome, String cpf, Endereco endereco) {
 		this.codigo = 0;
 		this.nome = nome;
 		this.setCpf(cpf);
-		this.banco = banco;
 		this.endereco = endereco;
 	}
 	
-	public Cliente(String nome, String cpf, String banco) {
+	public Cliente(String nome, String cpf) {
 		this.codigo = 0;
 		this.nome = nome;
 		this.setCpf(cpf);
-		this.banco = banco;
 		this.endereco = null;
 	}
 	public Integer getCodigo() {
@@ -55,12 +51,6 @@ public class Cliente {
 	public void setCpf(String cpf) {
 		this.cpf = cpf.replaceAll("\\.|\\-|\\ ", "");
 	}
-	public String getBanco() {
-		return banco;
-	}
-	public void setBanco(String banco) {
-		this.banco = banco;
-	}
 	public Endereco getEndereco() {
 		return endereco;
 	}
@@ -70,7 +60,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", banco=" + banco + ", endereco=" + endereco
+		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", endereco=" + endereco
 				+ ", CPF=" + formatarCpf() + "]";
 	}
 

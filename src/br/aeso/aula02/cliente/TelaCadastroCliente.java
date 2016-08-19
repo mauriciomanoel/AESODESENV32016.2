@@ -20,11 +20,11 @@ public class TelaCadastroCliente {
 		Endereco endereco = null;
 		
 		ArrayList<Cliente> lista;
-		Cliente c1 = new Cliente("Mateus", "913.760.817-76", "Bradesco");
+		Cliente c1 = new Cliente("Mateus", "913.760.817-76");
 		endereco = new Endereco(c1, "rua", "numero", "complemento", "bairro", "cidade", "cep");
 		c1.setEndereco(endereco);
 		
-		Cliente c2 = new Cliente("Mauricio Manoel", "913.760.817-76", "Bradesco");
+		Cliente c2 = new Cliente("Mauricio Manoel", "913.760.817-76");
 		endereco = new Endereco(c2, "rua", "numero", "complemento", "bairro", "cidade", "cep");
 		c2.setEndereco(endereco);
 		

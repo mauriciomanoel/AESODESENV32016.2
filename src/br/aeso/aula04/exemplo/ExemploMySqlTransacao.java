@@ -76,10 +76,10 @@ public class ExemploMySqlTransacao {
 		}
         
         //Desfazendo o insert no banco
-        //conn.rollback();
+        conn.rollback();
         
         // Comitando as ações no banco
-        conn.commit();
+        //conn.commit();
         
         // Habilitando o autocommit
         System.out.println("Terminou");
